@@ -140,9 +140,9 @@ gulp.task('watch', () => {
   //   },
   //   open: false, // "local" or true
   // });
-  // gulp.watch(['./*.html', './**/*.html']).on('change', reload);
-  // gulp.watch(path.scss + '/**/*.scss', gulp.series('sass:minified'));
-  // gulp.watch(path.src_js + '/**/*.js', gulp.series('js'));
+  gulp.watch(['./*.html', './**/*.html']).on('change', reload);
+  gulp.watch(path.scss + '/**/*.scss', gulp.series('sass:minified'));
+  gulp.watch(path.src_js + '/**/*.js', gulp.series('js'));
 });
 
 
