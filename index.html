@@ -197,7 +197,7 @@
                 We Build <span class="text-gradient-primary">Modern</span> Websites
               </h1>
               <div class="d-md-flex align-items-md-start">
-                <a href="contacts-v1.html" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Work with us</a>
+                <a href="#contact" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3" data-scroll>Work with us</a>
                 <p class="d-lg-block d-none mb-0 ps-md-3">We believe in building clean, modern websites for businesses that strive to innovate, create, and stand out.</p>
               </div>
             </div>
@@ -989,19 +989,88 @@
       </section>
 
       <!-- Contact CTA -->
-      <section class="container pt-3 pb-4 pb-md-5" style="margin-top: -156px; margin-bottom: 120px; transform: translateY(156px);">
-        <div class="card border-0 bg-gradient-primary">
-          <div class="card-body p-md-5 p-4 bg-size-cover" style="background-image: url(assets/img/landing/digital-agency/contact-bg.png);">
-            <div class="py-md-5 py-4 text-center">
-              <h3 class="h4 fw-normal text-light opacity-75">Want to work with us? Let’s talk</h3>
-              <a href="mailto:email@example.com" class="display-6 text-light">email@example.com</a>
+      <div id="contact">
+        <section class="container pt-3 pb-4 pb-md-5" style="margin-top: -156px; margin-bottom: 120px; transform: translateY(156px);">
+          <div class="card border-0 bg-gradient-primary">
+            <div class="card-body p-md-5 p-4 bg-size-cover" style="background-image: url(assets/img/landing/digital-agency/contact-bg.png);">
+              <div class="py-md-5 py-4 text-center">
+                <h3 class="h4 fw-normal text-light opacity-75">Want to work with us? Let’s talk</h3>
+
+                <form class="needs-validation" novalidate>
+                  <div class="row">
+                    <div class="col-md-4 mb-3 form-floating">
+                      <input class="form-control" type="text" id="name" placeholder="Your Name" required>
+                      <label for="name" class="form-label">Your Name</label>
+                      <div class="invalid-tooltip">Please enter your name.</div>
+                      <div class="valid-tooltip">Looks good!</div>
+                    </div>
+                    <div class="col-md-4 mb-3 form-floating">
+                      <input class="form-control" type="text" id="companyName" placeholder="Company Name" required>
+                      <label for="companyName" class="form-label">Company Name</label>
+                      <div class="invalid-tooltip">Please enter a company name.</div>
+                      <div class="valid-tooltip">Looks good!</div>
+                    </div>
+                    <div class="col-md-4 mb-3 form-floating">
+                      <input class="form-control" type="email" id="email" placeholder="Email Address" required>
+                      <label for="email" class="form-label">Email Address</label>
+                      <div class="invalid-tooltip">Please enter a valid email.</div>
+                      <div class="valid-tooltip">Looks good!</div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4 mb-3">
+                      <label for="service" class="form-label">Service</label>
+                      <select class="form-select" id="service" required>
+                        <option value="">Choose service...</option>
+                        <option value="website-scratch">Website from scratch</option>
+                        <option value="website-redesign">Website Redesign</option>
+                        <option value="graphic-design">Graphic Design</option>
+                        <option value="smart-contract">Smart Contract Creation</option>
+                        <option value="other">Other</option>
+                      </select>
+                      <div class="invalid-tooltip">Please choose a service.</div>
+                      <div class="valid-tooltip">Looks good!</div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <label for="budget" class="form-label">Project Budget</label>
+                      <select class="form-select" id="budget" required>
+                        <option value="">Choose state...</option>
+                        <option value="Arizona">Arizona</option>
+                        <option value="Colorado">Colorado</option>
+                        <option value="Florida">Florida</option>
+                        <option value="Indiana">Indiana</option>
+                        <option value="Kentucky">Kentucky</option>
+                        <option value="Texas">Texas</option>
+                      </select>
+                      <div class="invalid-tooltip">Please provide a valid state.</div>
+                      <div class="valid-tooltip">Looks good!</div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <label for="validationTooltip05" class="form-label">Zip</label>
+                      <input class="form-control" type="text" id="validationTooltip05" placeholder="Zip" required>
+                      <div class="invalid-tooltip">Please provide a valid zip.</div>
+                      <div class="valid-tooltip">Looks good!</div>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="invalidCheck01" required>
+                      <label class="form-check-label" for="invalidCheck01">Agree to terms and conditions</label>
+                      <div class="invalid-tooltip">You must agree before submitting.</div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary" type="submit">Submit Form</button>
+                </form>
+                <!-- <a href="mailto:email@example.com" class="display-6 text-light">email@example.com</a>
               <div class="pt-md-5 pt-4 pb-md-2">
                 <a href="contacts-v1.html" class="btn btn-lg btn-light">Contact us</a>
+              </div> -->
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
+
     </div>
   </main>
 
