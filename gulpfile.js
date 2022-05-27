@@ -130,25 +130,25 @@ gulp.task('clean', () => {
 
 // Watcher
 
-gulp.task('watch', () => {
-  global.watch = true;
+// gulp.task('watch', () => {
+//   global.watch = true;
 
-  // BrowserSync
-  // browserSync.init({
-  //   server: {
-  //     baseDir: './',
-  //   },
-  //   open: false, // "local" or true
-  // });
-  gulp.watch(['./*.html', './**/*.html']).on('change', reload);
-  gulp.watch(path.scss + '/**/*.scss', gulp.series('sass:minified'));
-  gulp.watch(path.src_js + '/**/*.js', gulp.series('js'));
-});
+//   // BrowserSync
+//   // browserSync.init({
+//   //   server: {
+//   //     baseDir: './',
+//   //   },
+//   //   open: false, // "local" or true
+//   // });
+//   gulp.watch(['./*.html', './**/*.html']).on('change', reload);
+//   gulp.watch(path.scss + '/**/*.scss', gulp.series('sass:minified'));
+//   gulp.watch(path.src_js + '/**/*.js', gulp.series('js'));
+// });
 
 
 // Default task - the dependent tasks will run in parallell / excluding Docs and Components compilation
 
 gulp.task(
   'default',
-  gulp.series('clean', 'vendor', gulp.parallel('js', 'sass:minified', 'sass:expanded'), 'watch')
+  gulp.series('clean', 'vendor', gulp.parallel('js', 'sass:minified', 'sass:expanded')) //, 'watch'
 );
