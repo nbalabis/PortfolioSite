@@ -5,8 +5,8 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app",
-    "postinstall": "gulp default"
+    "build": "gulp",
+    "start": "node app.js"
   },
   "author": "https://createx.studio/",
   "license": "ISC",
