@@ -138,7 +138,7 @@ gulp.task('watch', () => {
     server: {
       baseDir: './',
     },
-    open: "local", // or true
+    open: false, // "local" or true
   });
   gulp.watch(['./*.html', './**/*.html']).on('change', reload);
   gulp.watch(path.scss + '/**/*.scss', gulp.series('sass:minified'));
