@@ -1,17 +1,17 @@
 'use strict';
 
 const gulp = require('gulp'),
-      rollup = require('gulp-rollup'),
-      del = require('del'),
-      rename = require('gulp-rename'),
-      sass = require('gulp-sass')(require('sass')),
-      autoprefixer = require('gulp-autoprefixer'),
-      sourcemaps = require('gulp-sourcemaps'),
-      browserSync = require('browser-sync').create(),
-      reload = browserSync.reload,
-      babel = require('gulp-babel'),
-      uglify = require('gulp-uglify'),
-      packageFile = require('./package.json');
+  rollup = require('gulp-rollup'),
+  del = require('del'),
+  rename = require('gulp-rename'),
+  sass = require('gulp-sass')(require('sass')),
+  autoprefixer = require('gulp-autoprefixer'),
+  sourcemaps = require('gulp-sourcemaps'),
+  browserSync = require('browser-sync').create(),
+  reload = browserSync.reload,
+  babel = require('gulp-babel'),
+  uglify = require('gulp-uglify'),
+  packageFile = require('./package.json');
 
 
 // Define reusable paths
@@ -63,7 +63,7 @@ gulp.task('sass:minified', () => {
     .pipe(autoprefixer({
       cascade: false
     }))
-    .pipe(rename({ suffix: '.min'}))
+    .pipe(rename({ suffix: '.min' }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(path.css))
     .pipe(browserSync.stream()); // Inject css into browser
@@ -94,9 +94,9 @@ gulp.task('js', () => {
     }))
     .pipe(rename('theme.min.js'))
     .pipe(babel({
-      presets: [['@babel/env', {modules: false}]],
+      presets: [['@babel/env', { modules: false }]],
     }))
-    .pipe(uglify({output: {comments: /^!|@author|@version/i}}))
+    .pipe(uglify({ output: { comments: /^!|@author|@version/i } }))
     .pipe(gulp.dest(path.js))
     .on('end', () => {
       reload(); // One time browser reload at end of uglification (minification)
@@ -112,8 +112,8 @@ gulp.task('vendor', () => {
   let libs = dependencies.map((key) => {
     return key + '/**/*';
   });
-  return gulp.src(libs, {cwd: 'node_modules', base: './node_modules'})
-  .pipe(gulp.dest(path.vendor));
+  return gulp.src(libs, { cwd: 'node_modules', base: './node_modules' })
+    .pipe(gulp.dest(path.vendor));
 });
 
 
@@ -138,7 +138,7 @@ gulp.task('watch', () => {
     server: {
       baseDir: './',
     },
-    open: true, // or "local"
+    open: "local", // or true
   });
   gulp.watch(['./*.html', './**/*.html']).on('change', reload);
   gulp.watch(path.scss + '/**/*.scss', gulp.series('sass:minified'));
