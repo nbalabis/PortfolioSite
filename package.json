@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp",
+    "serve": "browser-sync start --no-open --server --files \"dist/css/*.css, dist/js/*.js, **/*.html, !node_modules/**/*.html\"",
     "start": "node app.js"
   },
   "author": "https://createx.studio/",
