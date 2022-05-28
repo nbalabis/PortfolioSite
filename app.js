@@ -8,10 +8,14 @@ const app = express()
 const router = express.Router() //Is this even needed?
 
 app.use(express.static(path.join(__dirname, 'assets')));
+
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
+app.get('*', (req, res) => {
+    res.sendFile(__dirname + '/404.html')
+})
 
 const port = process.env.PORT || 3000
 app.listen(port, () => {
