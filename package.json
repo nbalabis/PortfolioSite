@@ -4,7 +4,8 @@
   "description": "Silicon - Multipurpose Bootstrap 5 Template & UI Kit",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "https://createx.studio/",
   "license": "ISC",
