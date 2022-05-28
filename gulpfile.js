@@ -143,7 +143,7 @@ gulp.task('watch', () => {
     server: {
       baseDir: './',
     },
-    open: true, // "local" or true or false
+    open: false, // "local" or true or false
   });
   gulp.watch(['./*.html', './**/*.html']).on('change', reload);
   gulp.watch(path.scss + '/**/*.scss', gulp.series('sass:minified'));
@@ -164,5 +164,5 @@ gulp.task('serveprod', function () {
 
 gulp.task(
   'default',
-  gulp.series('clean', 'vendor', gulp.parallel('js', 'sass:minified', 'sass:expanded'), 'serveprod') //, 'watch'
+  gulp.series('clean', 'vendor', gulp.parallel('js', 'sass:minified', 'sass:expanded'), 'watch') //, 'watch'
 );
