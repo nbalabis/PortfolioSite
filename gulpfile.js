@@ -1,5 +1,9 @@
 'use strict';
 
+if (process.env.NODE_ENV !== "production") {
+  require('dotenv').config()
+}
+
 const gulp = require('gulp'),
   rollup = require('gulp-rollup'),
   del = require('del'),
@@ -14,7 +18,6 @@ const gulp = require('gulp'),
   packageFile = require('./package.json'),
   connect = require('gulp-connect');
 
-require('dotenv').config()
 
 // Define reusable paths
 
@@ -151,7 +154,7 @@ gulp.task('watch', () => {
 gulp.task('serveprod', function () {
   connect.server({
     root: ['./'],
-    port: process.env.PORT || 5000, // localhost:5000
+    port: process.env.PORT, // localhost:5000
     livereload: false
   });
 });
