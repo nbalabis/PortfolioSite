@@ -150,7 +150,7 @@ gulp.task('watch', () => {
 //Create production server
 gulp.task('serveprod', function () {
   connect.server({
-    root: [your_project_path],
+    root: ['./'],
     port: process.env.PORT || 5000, // localhost:5000
     livereload: false
   });
