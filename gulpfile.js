@@ -11,7 +11,8 @@ const gulp = require('gulp'),
   reload = browserSync.reload,
   babel = require('gulp-babel'),
   uglify = require('gulp-uglify'),
-  packageFile = require('./package.json');
+  packageFile = require('./package.json'),
+  connect = require('gulp-connect');
 
 require('dotenv').config()
 
