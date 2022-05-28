@@ -5,4 +5,7 @@
 
 // Example of a variable override to change Finder background color
 // Remove the "//" to comment it in and see it in action!
-// $body-bg: #12263F;
+$primary: #03045E !default;
+
+$theme-gradients: (
+    'primary': linear-gradient(90deg, $primary 0%, #0077B6 50%, #00B4D8 100%)) !default;
