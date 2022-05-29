@@ -479,23 +479,25 @@
               <!-- <h3 class="h4 fw-normal text-light opacity-75">Fill out the form below to get in touch</h3> -->
               <h2 class="h1 mb-4 text-center">Want to work with us? Let's Talk</h2>
 
-              <form class="needs-validation" novalidate>
+              <form action="https://formsubmit.co/5a283ced886440a7fef681ba83836b89" method="POST" id="contact-form" class="needs-validation" novalidate>
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://balabis-websites.herokuapp.com">
                 <div class="row">
                   <div class="col-md-4 mb-3">
                     <label for="name" class="form-label">Your Name</label>
-                    <input class="form-control" type="text" id="name" placeholder="Your Name" required>
+                    <input name="name" class="form-control" type="text" id="name" placeholder="Your Name" required>
                     <div class="invalid-tooltip">Please enter your name.</div>
                     <div class="valid-tooltip">Looks good!</div>
                   </div>
                   <div class="col-md-4 mb-3">
                     <label for="companyName" class="form-label">Company Name</label>
-                    <input class="form-control" type="text" id="companyName" placeholder="Company Name" required>
+                    <input name="companyName" class="form-control" type="text" id="companyName" placeholder="Company Name" required>
                     <div class="invalid-tooltip">Please enter a company name.</div>
                     <div class="valid-tooltip">Looks good!</div>
                   </div>
                   <div class="col-md-4 mb-3">
                     <label for="email" class="form-label">Email Address</label>
-                    <input class="form-control" type="email" id="email" placeholder="Email Address" required>
+                    <input name="email" class="form-control" type="email" id="email" placeholder="Email Address" required>
                     <div class="invalid-tooltip">Please enter a valid email.</div>
                     <div class="valid-tooltip">Looks good!</div>
                   </div>
@@ -503,7 +505,7 @@
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <label for="service" class="form-label">Service</label>
-                    <select class="form-select" id="service" required>
+                    <select name="service" class="form-select" id="service" required>
                       <option value="">Choose service...</option>
                       <option value="website-scratch">Website from scratch</option>
                       <option value="website-redesign">Website Redesign</option>
@@ -518,14 +520,14 @@
                     <label for="budget" class="form-label">Budget</label>
                     <div class="range-slider" data-start-min="5000" data-min="5000" data-max="50000" data-step="5000" style=" transform: translateY(-20px);">
                       <div class="range-slider-ui"></div>
-                      <input id="budget" class="form-control form-control-sm range-slider-value-min" type="hidden">
+                      <input name="budget" id="budget" class="form-control form-control-sm range-slider-value-min" type="hidden">
                     </div>
                   </div>
                 </div>
                 <div class="row justify-content-center">
                   <div class="col-md-6 mb-3">
                     <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" rows="3" placeholder="How can we help?"></textarea>
+                    <textarea name="message" class="form-control" id="message" rows="3" placeholder="How can we help?"></textarea>
                   </div>
                 </div>
                 <button class="btn btn-primary" type="submit">Contact us</button>
