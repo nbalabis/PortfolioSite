@@ -1,31 +1,42 @@
 {
-  "name": "@lottiefiles/lottie-player",
-  "version": "1.5.6",
-  "description": "Lottie animation and Telegram Sticker player web components.",
-  "main": "dist/lottie-player.js",
-  "module": "dist/lottie-player.esm.js",
-  "types": "dist/lottie-player.d.ts",
-  "homepage": "https://lottiefiles.com/web-player",
-  "repository": "https://github.com/LottieFiles/lottie-player.git",
-  "bugs": "https://github.com/LottieFiles/lottie-player/issues",
-  "author": "Jawish Hameed <jawish@lottiefiles.com>",
-  "license": "MIT",
-  "scripts": {
-    "start": "npm run cleanup && rollup -c --watch",
-    "build": "npm run cleanup && npm run build-lottie && npm run build-tgs",
-    "build-with-coverage": "npm run cleanup && CODE_COVERAGE=true npm run build-lottie && CODE_COVERAGE=true npm run build-tgs",
-    "build-lottie": "rollup -c ",
-    "build-tgs": "rollup -c rollup-tgs.config.js",
-    "watch-lottie": "npm run cleanup && rollup -c --watch",
-    "watch-tgs": "npm run cleanup && rollup -c rollup-tgs.config.js --watch",
-    "cleanup": "shx rm -rf dist && shx mkdir dist",
-    "release": "semantic-release",
-    "lint": "eslint . --ext .ts,.tsx,.js",
-    "lint:fix": "eslint . --ext .ts,.tsx,.js --fix",
-    "serve": "node ./cypress/pages/server.js -p 8000 &",
-    "start-cypress": "yarn run cypress run && npx nyc report --reporter=text-summary",
-    "run-tests": "yarn run build-with-coverage && yarn run serve && yarn run start-cypress",
-    "postrun-tests": "kill $(lsof -t -i:8000)"
+  "_args": [
+    [
+      "@lottiefiles/lottie-player@1.5.6",
+      "/Users/nicholasbalabis/Code/Portfolio"
+    ]
+  ],
+  "_from": "@lottiefiles/lottie-player@1.5.6",
+  "_id": "@lottiefiles/lottie-player@1.5.6",
+  "_inBundle": false,
+  "_integrity": "sha512-vhM3U+qGmagfkilGVDL8K3uxUfyFUs5MEyJfJiTi4/QN762jRVnVEZKr5aLMDiNfLrCOe4jkE+GbLifHcGkO8Q==",
+  "_location": "/@lottiefiles/lottie-player",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@lottiefiles/lottie-player@1.5.6",
+    "name": "@lottiefiles/lottie-player",
+    "escapedName": "@lottiefiles%2flottie-player",
+    "scope": "@lottiefiles",
+    "rawSpec": "1.5.6",
+    "saveSpec": null,
+    "fetchSpec": "1.5.6"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@lottiefiles/lottie-player/-/lottie-player-1.5.6.tgz",
+  "_spec": "1.5.6",
+  "_where": "/Users/nicholasbalabis/Code/Portfolio",
+  "author": {
+    "name": "Jawish Hameed",
+    "email": "jawish@lottiefiles.com"
+  },
+  "browserslist": [
+    "> 3%"
+  ],
+  "bugs": {
+    "url": "https://github.com/LottieFiles/lottie-player/issues"
   },
   "dependencies": {
     "@types/pako": "^1.0.1",
@@ -34,6 +45,7 @@
     "pako": "^2.0.4",
     "resize-observer-polyfill": "^1.5.1"
   },
+  "description": "Lottie animation and Telegram Sticker player web components.",
   "devDependencies": {
     "@babel/core": "^7.11.0",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
@@ -85,6 +97,13 @@
   "files": [
     "dist/"
   ],
+  "homepage": "https://lottiefiles.com/web-player",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
   "keywords": [
     "lottie",
     "animation",
@@ -96,18 +115,7 @@
     "telegram sticker",
     "tgs"
   ],
-  "browserslist": [
-    "> 3%"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
-  },
+  "license": "MIT",
   "lint-staged": {
     "src/**/*.{css,scss,md}": [
       "prettier --write"
@@ -116,8 +124,37 @@
       "eslint . --ext .ts,.tsx,.js --fix"
     ]
   },
+  "main": "dist/lottie-player.js",
+  "module": "dist/lottie-player.esm.js",
+  "name": "@lottiefiles/lottie-player",
   "nyc": {
     "extends": "@istanbuljs/nyc-config-typescript",
     "all": true
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LottieFiles/lottie-player.git"
+  },
+  "scripts": {
+    "build": "npm run cleanup && npm run build-lottie && npm run build-tgs",
+    "build-lottie": "rollup -c ",
+    "build-tgs": "rollup -c rollup-tgs.config.js",
+    "build-with-coverage": "npm run cleanup && CODE_COVERAGE=true npm run build-lottie && CODE_COVERAGE=true npm run build-tgs",
+    "cleanup": "shx rm -rf dist && shx mkdir dist",
+    "lint": "eslint . --ext .ts,.tsx,.js",
+    "lint:fix": "eslint . --ext .ts,.tsx,.js --fix",
+    "postrun-tests": "kill $(lsof -t -i:8000)",
+    "release": "semantic-release",
+    "run-tests": "yarn run build-with-coverage && yarn run serve && yarn run start-cypress",
+    "serve": "node ./cypress/pages/server.js -p 8000 &",
+    "start": "npm run cleanup && rollup -c --watch",
+    "start-cypress": "yarn run cypress run && npx nyc report --reporter=text-summary",
+    "watch-lottie": "npm run cleanup && rollup -c --watch",
+    "watch-tgs": "npm run cleanup && rollup -c rollup-tgs.config.js --watch"
+  },
+  "types": "dist/lottie-player.d.ts",
+  "version": "1.5.6"
 }

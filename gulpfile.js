@@ -1,5 +1,9 @@
 'use strict';
 
+if (process.env.NODE_ENV !== "production") {
+  require('dotenv').config()
+}
+
 const gulp = require('gulp'),
   rollup = require('gulp-rollup'),
   del = require('del'),

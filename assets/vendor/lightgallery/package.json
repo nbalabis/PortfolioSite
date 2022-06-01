@@ -1,7 +1,45 @@
 {
-  "name": "lightgallery",
-  "version": "2.4.0",
+  "_args": [
+    [
+      "lightgallery@2.4.0",
+      "/Users/nicholasbalabis/Code/Portfolio"
+    ]
+  ],
+  "_from": "lightgallery@2.4.0",
+  "_id": "lightgallery@2.4.0",
+  "_inBundle": false,
+  "_integrity": "sha512-9i/E/w3yaqs56y3k6SWIUS3JTLpeDCZIVnIuNppzAmj5KjLGy5wrFisoDUD0HdxVUdX0wHG5mjvB4h0TXtyf/w==",
+  "_location": "/lightgallery",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "lightgallery@2.4.0",
+    "name": "lightgallery",
+    "escapedName": "lightgallery",
+    "rawSpec": "2.4.0",
+    "saveSpec": null,
+    "fetchSpec": "2.4.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/lightgallery/-/lightgallery-2.4.0.tgz",
+  "_spec": "2.4.0",
+  "_where": "/Users/nicholasbalabis/Code/Portfolio",
+  "author": {
+    "name": "Sachin Neravath",
+    "email": "sachi77n@gmail.com",
+    "url": "https://github.com/sachinchoolur"
+  },
+  "bugs": {
+    "url": "https://github.com/sachinchoolur/lightGallery/issues"
+  },
   "description": "lightGallery is a feature-rich, modular JavaScript gallery plugin for building beautiful image and video galleries for the web and the mobile",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "homepage": "https://www.lightgalleryjs.com/",
   "keywords": [
     "JavaScript",
     "Gallery",
@@ -9,25 +47,15 @@
     "slider",
     "lightBox"
   ],
+  "license": "GPLv3",
   "main": "lightgallery.umd.js",
   "min": "lightgallery.min.js",
   "module": "lightgallery.es5.js",
-  "typings": "index.d.ts",
+  "name": "lightgallery",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sachinchoolur/lightGallery"
+    "url": "git+https://github.com/sachinchoolur/lightGallery.git"
   },
-  "homepage": "https://www.lightgalleryjs.com/",
-  "bugs": {
-    "url": "https://github.com/sachinchoolur/lightGallery/issues"
-  },
-  "license": "GPLv3",
-  "author": {
-    "name": "Sachin Neravath",
-    "email": "sachi77n@gmail.com",
-    "url": "https://github.com/sachinchoolur"
-  },
-  "engines": {
-    "node": ">=6.0.0"
-  }
+  "typings": "index.d.ts",
+  "version": "2.4.0"
 }
