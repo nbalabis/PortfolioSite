@@ -1,42 +1,14 @@
 {
-  "_args": [
-    [
-      "imagesloaded@5.0.0",
-      "/Users/nicholasbalabis/Code/Portfolio"
-    ]
+  "name": "imagesloaded",
+  "version": "5.0.0",
+  "description": "JavaScript is all like _You images done yet or what?_",
+  "main": "imagesloaded.js",
+  "files": [
+    "imagesloaded*.js"
   ],
-  "_from": "imagesloaded@5.0.0",
-  "_id": "imagesloaded@5.0.0",
-  "_inBundle": false,
-  "_integrity": "sha512-/0JGSubc1MTCoDKVmonLHgbifBWHdyLkun+R/151E1c5n79hiSxcd7cB7mPXFgojYu8xnRZv7GYxzKoxW8BetQ==",
-  "_location": "/imagesloaded",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "version",
-    "registry": true,
-    "raw": "imagesloaded@5.0.0",
-    "name": "imagesloaded",
-    "escapedName": "imagesloaded",
-    "rawSpec": "5.0.0",
-    "saveSpec": null,
-    "fetchSpec": "5.0.0"
-  },
-  "_requiredBy": [
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/imagesloaded/-/imagesloaded-5.0.0.tgz",
-  "_spec": "5.0.0",
-  "_where": "/Users/nicholasbalabis/Code/Portfolio",
-  "author": {
-    "name": "David DeSandro"
-  },
-  "bugs": {
-    "url": "https://github.com/desandro/imagesloaded/issues"
-  },
   "dependencies": {
     "ev-emitter": "^2.1.2"
   },
-  "description": "JavaScript is all like _You images done yet or what?_",
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-plugin-metafizzy": "^1.2.1",
@@ -44,13 +16,16 @@
     "qunit": "^2.17.2",
     "terser": "^5.10.0"
   },
-  "directories": {
-    "test": "test"
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "npx eslint .",
+    "dist": "node tasks/dist.js",
+    "version": "node tasks/version.js && npm run dist && git add -A ."
   },
-  "files": [
-    "imagesloaded*.js"
-  ],
-  "homepage": "https://github.com/desandro/imagesloaded",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/desandro/imagesloaded.git"
+  },
   "keywords": [
     "images",
     "loaded",
@@ -59,17 +34,12 @@
     "jquery-plugin"
   ],
   "license": "MIT",
-  "main": "imagesloaded.js",
-  "name": "imagesloaded",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/desandro/imagesloaded.git"
+  "bugs": {
+    "url": "https://github.com/desandro/imagesloaded/issues"
   },
-  "scripts": {
-    "dist": "node tasks/dist.js",
-    "lint": "npx eslint .",
-    "test": "npm run lint",
-    "version": "node tasks/version.js && npm run dist && git add -A ."
+  "homepage": "https://github.com/desandro/imagesloaded",
+  "directories": {
+    "test": "test"
   },
-  "version": "5.0.0"
+  "author": "David DeSandro"
 }
