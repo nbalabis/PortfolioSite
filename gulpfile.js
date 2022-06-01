@@ -16,7 +16,7 @@ const gulp = require('gulp'),
   babel = require('gulp-babel'),
   uglify = require('gulp-uglify'),
   packageFile = require('./package.json'),
-  connect = require('gulp-connect');
+  nodemon = require('gulp-nodemon');
 
 
 // Define reusable paths
@@ -143,19 +143,27 @@ gulp.task('watch', () => {
     server: {
       baseDir: './',
     },
-    open: false, // "local" or true or false
+    open: false, // or "local"
   });
   gulp.watch(['./*.html', './**/*.html']).on('change', reload);
   gulp.watch(path.scss + '/**/*.scss', gulp.series('sass:minified'));
   gulp.watch(path.src_js + '/**/*.js', gulp.series('js'));
 });
 
-//Create production server
-gulp.task('serveprod', function () {
-  connect.server({
-    root: ['./'],
-    port: process.env.PORT, // localhost:5000
-    livereload: false
+//nodemon
+gulp.task('nodemon', function (cb) {
+
+  let started = false;
+
+  return nodemon({
+    script: 'app.js'
+  }).on('start', function () {
+    // to avoid nodemon being started multiple times
+    // thanks @matthisk
+    if (!started) {
+      cb();
+      started = true;
+    }
   });
 });
 
@@ -164,5 +172,5 @@ gulp.task('serveprod', function () {
 
 gulp.task(
   'default',
-  gulp.series('clean', 'vendor', gulp.parallel('js', 'sass:minified', 'sass:expanded'), 'watch') //, 'watch'
+  gulp.series('clean', 'vendor', gulp.parallel('js', 'sass:minified', 'sass:expanded'), 'nodemon') //TOOK OUT 
 );
