@@ -1,32 +1,16 @@
 {
-  "_args": [
-    [
-      "boxicons@2.1.2",
-      "/Users/nicholasbalabis/Code/Portfolio"
-    ]
-  ],
-  "_from": "boxicons@2.1.2",
-  "_id": "boxicons@2.1.2",
-  "_inBundle": false,
-  "_integrity": "sha512-NAEj0xmE64Hv6q7yjvyEVsdA+XIESHLe/S/bkCd2A197LQNpZ5ftopxmD3DMatZ1lndGIzxxqqFnWrD1oB3IIg==",
-  "_location": "/boxicons",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "version",
-    "registry": true,
-    "raw": "boxicons@2.1.2",
-    "name": "boxicons",
-    "escapedName": "boxicons",
-    "rawSpec": "2.1.2",
-    "saveSpec": null,
-    "fetchSpec": "2.1.2"
+  "name": "boxicons",
+  "version": "2.1.2",
+  "description": "High Quality Web Icons",
+  "scripts": {
+    "start": "webpack-dev-server --history-api-fallback --hot --open",
+    "build": "webpack -p ",
+    "optimize-svg": "svgo --config=svgo.config.js -f svg/regular && svgo --config=svgo.config.js -f svg/logos && svgo --config=svgo.config.js -f svg/solid"
   },
-  "_requiredBy": [
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/boxicons/-/boxicons-2.1.2.tgz",
-  "_spec": "2.1.2",
-  "_where": "/Users/nicholasbalabis/Code/Portfolio",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atisawd/boxicons.git"
+  },
   "author": {
     "name": "Atisa",
     "email": "atisawd@gmail.com",
@@ -43,7 +27,9 @@
     "react-interactive": "^0.8.1",
     "react-router-dom": "^4.2.2"
   },
-  "description": "High Quality Web Icons",
+  "resolutions": {
+    "eslint-scope": "3.7.1"
+  },
   "devDependencies": {
     "ajv": "^6.10.2",
     "babel-core": "^6.26.0",
@@ -66,22 +52,8 @@
     "webpack-dev-server": "^3.9.0",
     "wrapper-webpack-plugin": "^1.0.0"
   },
-  "homepage": "https://github.com/atisawd/boxicons#readme",
+  "bundleDependencies": false,
   "license": "(CC-BY-4.0 OR OFL-1.1 OR MIT)",
   "main": "./dist/boxicons.js",
-  "name": "boxicons",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/atisawd/boxicons.git"
-  },
-  "resolutions": {
-    "eslint-scope": "3.7.1"
-  },
-  "scripts": {
-    "build": "webpack -p ",
-    "optimize-svg": "svgo --config=svgo.config.js -f svg/regular && svgo --config=svgo.config.js -f svg/logos && svgo --config=svgo.config.js -f svg/solid",
-    "start": "webpack-dev-server --history-api-fallback --hot --open"
-  },
-  "style": "./css/boxicons.css",
-  "version": "2.1.2"
+  "style": "./css/boxicons.css"
 }
