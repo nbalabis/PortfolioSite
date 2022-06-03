@@ -1,54 +1,44 @@
 {
-  "name": "shufflejs",
-  "version": "6.0.0",
-  "description": "Categorize, sort, and filter a responsive grid of items",
-  "keywords": [
-    "gallery",
-    "shuffle",
-    "layout",
-    "masonry",
-    "filter",
-    "sort",
-    "responsive",
-    "grid",
-    "mobile",
-    "tiles"
+  "_args": [
+    [
+      "shufflejs@6.0.0",
+      "/Users/nicholasbalabis/Code/Portfolio"
+    ]
   ],
-  "main": "dist/shuffle.js",
-  "module": "dist/shuffle.esm.js",
-  "moduleSource": "src/shuffle.js",
-  "types": "index.d.ts",
-  "scripts": {
-    "compile": "gulp scripts",
-    "css": "gulp css",
-    "gulp": "gulp",
-    "build": "npm run gulp && npm run css",
-    "serve": "gulp jekyll",
-    "test-all": "npm run lint && npm test && npm run type-check",
-    "test": "jest",
-    "lint": "eslint src",
-    "type-check": "tsc --project ./test/types",
-    "watch": "gulp watch"
+  "_from": "shufflejs@6.0.0",
+  "_id": "shufflejs@6.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-OV6qXYmfQUHT9u9BvO/1wItZ3YWrQVMdKI0d9gS4xaYLyhB6xGN+Oo+tNzQui+rMt+L/h1f34LNBsrCCRii9Yg==",
+  "_location": "/shufflejs",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "shufflejs@6.0.0",
+    "name": "shufflejs",
+    "escapedName": "shufflejs",
+    "rawSpec": "6.0.0",
+    "saveSpec": null,
+    "fetchSpec": "6.0.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/Vestride/Shuffle.git"
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/shufflejs/-/shufflejs-6.0.0.tgz",
+  "_spec": "6.0.0",
+  "_where": "/Users/nicholasbalabis/Code/Portfolio",
+  "author": {
+    "name": "Glen Cheney",
+    "email": "cheney.glen@gmail.com"
   },
-  "author": "Glen Cheney <cheney.glen@gmail.com>",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Vestride/Shuffle/issues"
   },
-  "homepage": "https://github.com/Vestride/Shuffle",
-  "files": [
-    "dist",
-    "src",
-    "index.d.ts"
-  ],
   "dependencies": {
     "array-parallel": "^0.1.3",
     "tiny-emitter": "^2.1.0"
   },
+  "description": "Categorize, sort, and filter a responsive grid of items",
   "devDependencies": {
     "@babel/core": "^7.16.12",
     "@babel/preset-env": "^7.16.11",
@@ -73,5 +63,46 @@
     "sass": "^1.49.0",
     "sinon": "^13.0.0",
     "typescript": "^4.5.5"
-  }
+  },
+  "files": [
+    "dist",
+    "src",
+    "index.d.ts"
+  ],
+  "homepage": "https://github.com/Vestride/Shuffle",
+  "keywords": [
+    "gallery",
+    "shuffle",
+    "layout",
+    "masonry",
+    "filter",
+    "sort",
+    "responsive",
+    "grid",
+    "mobile",
+    "tiles"
+  ],
+  "license": "MIT",
+  "main": "dist/shuffle.js",
+  "module": "dist/shuffle.esm.js",
+  "moduleSource": "src/shuffle.js",
+  "name": "shufflejs",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Vestride/Shuffle.git"
+  },
+  "scripts": {
+    "build": "npm run gulp && npm run css",
+    "compile": "gulp scripts",
+    "css": "gulp css",
+    "gulp": "gulp",
+    "lint": "eslint src",
+    "serve": "gulp jekyll",
+    "test": "jest",
+    "test-all": "npm run lint && npm test && npm run type-check",
+    "type-check": "tsc --project ./test/types",
+    "watch": "gulp watch"
+  },
+  "types": "index.d.ts",
+  "version": "6.0.0"
 }
