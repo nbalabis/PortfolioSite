@@ -17,6 +17,10 @@ app.get('/local-business', (req, res) => {
     res.sendFile(__dirname + '/local-business-landing.html')
 })
 
+app.get('/e-commerce', (req, res) => {
+    res.sendFile(__dirname + '/ecom.html')
+})
+
 app.get('*', (req, res) => {
     res.sendFile(__dirname + '/404.html')
 })
