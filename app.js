@@ -21,6 +21,10 @@ app.get('/e-commerce', (req, res) => {
     res.sendFile(__dirname + '/ecom.html')
 })
 
+app.get('/nft', (req, res) => {
+    res.sendFile(__dirname + '/nft.html')
+})
+
 app.get('*', (req, res) => {
     res.sendFile(__dirname + '/404.html')
 })
